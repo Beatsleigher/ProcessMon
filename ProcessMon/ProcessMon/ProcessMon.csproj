@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\ConfigFiles\appmonitor.template.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\ConfigFiles\appmonitor.template.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="netmq" Version="4.0.0.207" />
+    <PackageReference Include="newtonsoft.json" Version="12.0.3" />
+    <PackageReference Include="nlog" Version="4.7.2" />
+  </ItemGroup>
+
+</Project>

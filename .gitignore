@@ -1,0 +1,25 @@
+####################################
+### Gitignore file for ProcessMon
+####################################
+
+###
+# Ignore VS bin/ and obj/ directories
+###
+bin/
+obj/
+
+###
+# Ignore custom IDE settings
+###
+.vs/
+
+###
+# Ignore binaries
+###
+*.dll
+*.exe
+*.so
+*.a
+*.o
+*.pdb
+*.log

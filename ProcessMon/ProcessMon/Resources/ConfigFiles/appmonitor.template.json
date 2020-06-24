@@ -1,0 +1,46 @@
+////////////////////////////////////////////////////////////////////
+// Basic skeleton file for applications to be monitored.
+// If you use this file, be sure to REMOVE this comment!
+//
+//
+// Detailed description:
+//   
+// description: This field is ignored by procmon and should be used to describe the application.
+// executable: The path to the application binary to be monitored
+// proc_args: Arguments to be passed to the application when it's started
+// stdout_file: If a path to a file is given, it will be used to dump the app's stdout
+// stderr_file: If a path to a file is given, it will be used to dump the app's stderr
+// working_dir: If a directory path is given, it will be used as the process' working directory.
+// priority: See https://docs.microsoft.com/en-us/dotnet/api/system.diagnostics.process.priorityclass?view=netcore-3.1
+// niceness: ONLY ON LINUX! Set the process' niceness
+// run_as_user: If given, will run the process as that user. Leave empty for current user
+// run_once: If set to true, the program will be allowed to run once and won't be restarted once it dies
+// no_restart_after_signal: If the app in question is terminated by one of these signals, it won't be restarted
+// EnvironmentArgs: A dictionary of environment arguments to pass to the process:
+//  Example:
+//  [
+//    { "my_env": "my_env_value" }
+//  ]
+////////////////////////////////////////////////////////////////////
+
+{
+  "Name": "A name for the monitor",
+  "Description": "This is a placeholder file; think of it as a skeleton for applications you want to monitor.",
+  "Executable": "/path/to/app",
+  "ProcessArgs": [
+    "here you can put",
+    "arguments for your application",
+    "--some-switch"
+  ],
+  "StdoutFile": "Leave this empty or enter a file in which to dump the output from stdout",
+  "StderrFile": "Leave this empty or enter a file in which to dump the output from stderr",
+  "WorkingDirectory": "Leave this empty to use the directory the app stored in",
+  "Priority": 32,
+  "Niceness": 0,
+  "RunAsUser": "root",
+  "RunOnce": false,
+  "NoRestartAfterSignal": [
+    9
+  ],
+  "EnvironmentArgs": {}
+}
